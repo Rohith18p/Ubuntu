@@ -8,17 +8,17 @@
     name="Ground_link">
     <inertial>
       <origin
-        xyz="0.15483 -0.057349 4.0127E-09"
+        xyz="-4.0127E-09 0.15483 0.057349"
         rpy="0 0 0" />
       <mass
         value="3.3464" />
       <inertia
-        ixx="0.020256"
-        ixy="-0.0020102"
-        ixz="3.9352E-10"
-        iyy="0.047369"
-        iyz="-3.3678E-10"
-        izz="0.03432" />
+        ixx="0.03432"
+        ixy="-3.9352E-10"
+        ixz="-3.3678E-10"
+        iyy="0.020256"
+        iyz="0.0020102"
+        izz="0.047369" />
     </inertial>
     <visual>
       <origin
@@ -48,17 +48,17 @@
     name="Base_Link">
     <inertial>
       <origin
-        xyz="-0.081299 0.0018411 3.1342E-05"
+        xyz="-0.0018252 0.000243 0.081299"
         rpy="0 0 0" />
       <mass
         value="0.58835" />
       <inertia
-        ixx="0.0011149"
-        ixy="5.5501E-05"
-        ixz="9.4484E-07"
-        iyy="0.0018017"
-        iyz="-6.5271E-06"
-        izz="0.002185" />
+        ixx="0.0018082"
+        ixy="5.0169E-05"
+        ixz="5.5023E-05"
+        iyy="0.0021784"
+        iyz="-7.3253E-06"
+        izz="0.0011149" />
     </inertial>
     <visual>
       <origin
@@ -86,16 +86,16 @@
   </link>
   <joint
     name="J_1"
-    type="revolute">
+    type="continuous">
     <origin
-      xyz="0 -0.135 0"
-      rpy="1.6861 0 1.5708" />
+      xyz="0 0 0.135"
+      rpy="0 0 0" />
     <parent
       link="Ground_link" />
     <child
       link="Base_Link" />
     <axis
-      xyz="1 0 0" />
+      xyz="0 0 -1" />
     <limit
       lower="0"
       upper="0"
@@ -106,17 +106,17 @@
     name="Shoulder_Link">
     <inertial>
       <origin
-        xyz="0.0010834 0.14209 -0.0030269"
+        xyz="0.0025565 -0.086522 0.11272"
         rpy="0 0 0" />
       <mass
         value="0.98781" />
       <inertia
-        ixx="0.0060013"
-        ixy="-2.3467E-05"
-        ixz="-1.2635E-05"
-        iyy="0.0027732"
-        iyz="8.9601E-05"
-        izz="0.0069719" />
+        ixx="0.0060003"
+        ixy="3.4501E-05"
+        ixz="-4.4949E-05"
+        iyy="0.0054162"
+        iyz="0.0020295"
+        izz="0.0043299" />
     </inertial>
     <visual>
       <origin
@@ -144,16 +144,16 @@
   </link>
   <joint
     name="J_2"
-    type="revolute">
+    type="continuous">
     <origin
-      xyz="-0.12 0 0"
-      rpy="-2.4655 0 -1.5708" />
+      xyz="0 0 0.12"
+      rpy="0 0 -0.13235" />
     <parent
       link="Base_Link" />
     <child
       link="Shoulder_Link" />
     <axis
-      xyz="1 0 0" />
+      xyz="0.99986 0.017021 0" />
     <limit
       lower="0"
       upper="0"
@@ -164,17 +164,17 @@
     name="Elbow_Link">
     <inertial>
       <origin
-        xyz="-0.001929 0.11388 -0.043378"
+        xyz="-0.00049847 -0.084051 0.088254"
         rpy="0 0 0" />
       <mass
         value="0.43553" />
       <inertia
         ixx="0.0023528"
-        ixy="9.0787E-06"
-        ixz="-1.5902E-05"
-        iyy="0.0015731"
-        iyz="0.00060249"
-        izz="0.0031893" />
+        ixy="-1.1585E-06"
+        ixz="1.1151E-06"
+        iyy="0.0023426"
+        iyz="0.0010074"
+        izz="0.0024197" />
     </inertial>
     <visual>
       <origin
@@ -202,16 +202,16 @@
   </link>
   <joint
     name="J_3"
-    type="revolute">
+    type="continuous">
     <origin
-      xyz="0 0.25 0"
-      rpy="0.44871 0 0" />
+      xyz="0.0026628 -0.15642 0.195"
+      rpy="0 0 0" />
     <parent
       link="Shoulder_Link" />
     <child
       link="Elbow_Link" />
     <axis
-      xyz="1 0 0" />
+      xyz="0.99986 0.017021 0" />
     <limit
       lower="0"
       upper="0"
